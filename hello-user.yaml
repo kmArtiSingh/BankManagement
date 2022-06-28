@@ -3,4 +3,11 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-
+parameters:
+    - name: yourName
+      type: string
+      default: 'world'
+      
+steps:
+    - script: echo Hello ${{parameters.yourName}}
+      displayName: 'Hello User'
